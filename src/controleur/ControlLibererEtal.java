@@ -29,5 +29,4 @@ public class ControlLibererEtal {
 		controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur).libererEtal();
 		return donneesEtal;
 	}
-
 }
