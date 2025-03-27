@@ -32,6 +32,9 @@ public class BoundaryAcheterProduit {
 				}
 				String nomVendeur = nomVendeurs[choixUtilisateur];
 				System.out.println(nomAcheteur + " se déplace jusqu'à l'étal du vendeur " + nomVendeur);
+				System.out.println("Bonjour " + nomVendeur);
+				int nbProduit = Clavier.entrerEntier("Combien de " + produit + " voulez-vous acheter?");
+				
 			}
 		} 
 		else {
