@@ -17,7 +17,7 @@ public class BoundaryEmmenager {
 			StringBuilder question = new StringBuilder();
 			question.append("Êtes-vous :\n");
 			question.append("1 - un druide.\n");
-			question.append("2 - un gaulois.\n");
+			question.append("2 - un gaulois.");
 			int choixUtilisateur = -1;
 			do {
 				choixUtilisateur = Clavier.entrerEntier(question.toString());
