@@ -32,9 +32,19 @@ public class ControlAcheterProduit {
 		return(nomVendeurs);
 	}
 	
-	public String acheterProduit(String produit, int nbProduit) {
-		village.
-	}
+	public String acheterProduit(String produit, int nbProduit, String nomVendeur, String nomAcheteur) {
+		String res = (nomAcheteur + " n'a pas réussi à acheter " + nbProduit + " " + produit + " à " + nomVendeur);
+		int quantiteAchete = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur).acheterProduit(nbProduit);
+		if (quantiteAchete == 0) {
+			res = (nomAcheteur + " veut acheter " + nbProduit + " " + produit +", malheureusement il n’y en a plus !");
+		}
+		else if (quantiteAchete < nbProduit) {
+			res = (nomAcheteur + " veut acheter "+ nbProduit + " " + produit +", malheureusement "+ nomVendeur + " n’en a plus que " + nbProduit + ". "+ nomAcheteur + " achète tout le stock de "+ nomVendeur +".");
 
-	//TODO a completer
+		}
+		else if (quantiteAchete == nbProduit) {
+			res = (nomAcheteur + " achète " + nbProduit + " " + produit + " à " + nomVendeur);
+		}
+		return(res);
+	}
 }

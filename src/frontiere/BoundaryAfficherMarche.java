@@ -22,7 +22,7 @@ public class BoundaryAfficherMarche {
 				vendeur = infosMarche[i*3];
 				quantite = infosMarche[i*3+1];
 				produit = infosMarche[i*3+2];
-				System.out.println("-" + vendeur + " qui vend " + quantite + " " + produit);
+				System.out.println("- " + vendeur + " qui vend " + quantite + " " + produit);
 			}
 		}
 	}

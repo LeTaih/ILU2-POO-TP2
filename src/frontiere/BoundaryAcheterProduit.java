@@ -24,16 +24,21 @@ public class BoundaryAcheterProduit {
 					question.append((i+1) + " - " + nomVendeurs[i] + "\n");
 				}
 				int choixUtilisateur = -1;
-				while (choixUtilisateur < 0 && choixUtilisateur > nomVendeurs.length) {
+				while (choixUtilisateur < 0 || choixUtilisateur > nomVendeurs.length) {
 					choixUtilisateur = Clavier.entrerEntier(question.toString());
-					if (choixUtilisateur < 0 && choixUtilisateur > nomVendeurs.length) {
+					if (choixUtilisateur < 0 || choixUtilisateur > nomVendeurs.length) {
 						System.out.println("Vous devez entrer un choix entre 1 et " + nomVendeurs.length);
 					}
 				}
-				String nomVendeur = nomVendeurs[choixUtilisateur];
+				String nomVendeur = nomVendeurs[choixUtilisateur-1];
 				System.out.println(nomAcheteur + " se déplace jusqu'à l'étal du vendeur " + nomVendeur);
-				System.out.println("Bonjour " + nomVendeur);
-				int nbProduit = Clavier.entrerEntier("Combien de " + produit + " voulez-vous acheter?");
+				System.out.println("Bonjour " + nomAcheteur);
+				int nbProduit = -1;
+				while (nbProduit<0) {
+					nbProduit = Clavier.entrerEntier("Combien de " + produit + " voulez-vous acheter?");
+					if (nbProduit<0) System.out.println("Veuillez entrer un nombre supérieur à 0.");
+				}
+				System.out.println(controlAcheterProduit.acheterProduit(produit, nbProduit, nomVendeur, nomAcheteur));
 				
 			}
 		} 
