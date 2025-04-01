@@ -13,6 +13,7 @@ import personnages.Gaulois;
 import villagegaulois.Etal;
 import villagegaulois.Village;
 
+@SuppressWarnings("unused")
 public class TestControleursDesCas {
 	public static void main(String[] args) {
 
