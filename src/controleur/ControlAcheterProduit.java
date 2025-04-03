@@ -39,7 +39,7 @@ public class ControlAcheterProduit {
 			res = (nomAcheteur + " veut acheter " + nbProduit + " " + produit +", malheureusement il n’y en a plus !");
 		}
 		else if (quantiteAchete < nbProduit) {
-			res = (nomAcheteur + " veut acheter "+ nbProduit + " " + produit +", malheureusement "+ nomVendeur + " n’en a plus que " + nbProduit + ". "+ nomAcheteur + " achète tout le stock de "+ nomVendeur +".");
+			res = (nomAcheteur + " veut acheter "+ nbProduit + " " + produit +", malheureusement "+ nomVendeur + " n’en a plus que " + quantiteAchete + ". "+ nomAcheteur + " achète tout le stock de "+ nomVendeur +".");
 
 		}
 		else if (quantiteAchete == nbProduit) {
